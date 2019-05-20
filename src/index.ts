@@ -27,3 +27,5 @@ const listenPort = PORT || 3030;
 app.listen(listenPort, function () {
   console.log(`Example app listening on port ${listenPort}!`);
 });
+
+export default app;

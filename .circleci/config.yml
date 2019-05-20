@@ -12,6 +12,38 @@ jobs:
       - run: |
           yarn
           yarn global add typescript
+
+      # tries to save dependencies into cache
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
       
       # builds distribuion folder
       - run: yarn build
+
+  test:
+    docker:
+      - image: circleci/node:10
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+      # tries to restore dependencies folder from cache
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+
+      - run: |
+          yarn test
+
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - build
+      - test:
+          requires:
+            - build
