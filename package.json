@@ -6,7 +6,7 @@
     "start": "node build/index.js",
     "dev": "nodemon src/index.ts",
     "build": "tsc --build",
-    "test": "ENVIRONMENT=DEV mocha --timeout 60000 -r ts-node/register tests/**/*.spec.ts --exit"
+    "test": "mocha --timeout 60000 -r ts-node/register tests/**/*.spec.ts --exit"
   },
   "repository": {
     "type": "git",

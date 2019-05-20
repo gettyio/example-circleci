@@ -7,7 +7,7 @@ const {
   PORT
 } = process.env;
 
-var app = express();
+const app = express();
 
 // setup express
 app.use(bodyParser.urlencoded({ extended: true }));

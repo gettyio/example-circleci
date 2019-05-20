@@ -4,13 +4,13 @@ import app from '../../src/index';
 
 describe('[Integration] Example API endpoints', () => {
   it('Should return hello world', (done) => {
-    request(app.express)
+    request(app)
       .get('/')
       .send({})
       .end((err, res) => {
         expect(res.statusCode).to.equal(200);
         expect(res.clientError).to.be.false;
-        expect(res.body).to.equal('hello world');
+        expect(res.text).to.equal('hello world');
         done();
       });
   })
