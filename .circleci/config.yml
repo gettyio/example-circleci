@@ -9,6 +9,11 @@ jobs:
 
     steps:
       - checkout
+
+      # tries to restore dependencies folder from cache
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
       
       # downloads dependencies
       - run: |
