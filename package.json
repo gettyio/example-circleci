@@ -1,6 +1,6 @@
 {
   "name": "example-circleci",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Example service to be a knowledge base for CircleCI's usage",
   "scripts": {
     "start": "node build/index.js",
