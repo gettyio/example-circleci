@@ -5,8 +5,6 @@ jobs:
     docker:
       - image: circleci/node:10
 
-    working_directory: /repo
-
     steps:
       - checkout
 
@@ -38,8 +36,6 @@ jobs:
   test:
     docker:
       - image: circleci/node:10
-      
-    working_directory: /repo
 
     steps:
       - checkout
@@ -55,8 +51,6 @@ jobs:
   docker-build:
     docker:
       - image: docker:17.05.0-ce-git
-
-    working_directory: /repo
 
     steps:
       - checkout
