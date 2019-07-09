@@ -10,7 +10,7 @@ describe('[Integration] Example API endpoints', () => {
       .end((err, res) => {
         expect(res.statusCode).to.equal(200);
         expect(res.clientError).to.be.false;
-        expect(res.text).to.equal('hello world');
+        expect(res.text).to.equal('Hello World!');
         done();
       });
   })
