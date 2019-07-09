@@ -16,7 +16,7 @@ app.use(cors());
 
 // invokable routes
 app.use('/', function (req, res) {
-  res.send('hello world');
+  res.send('Hello World!');
 });
 
 // handler for non-mapped routes
