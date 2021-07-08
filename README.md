@@ -29,6 +29,6 @@ Snippet, whole code is available at [.circleci/config.yml](.circleci/config.yml)
 - run: yarn build
 ```
 
-as i named it `build` and my current branch is `development`, the local execution will be something like this:
+as i named it `build` and my current branch is `develop`, the local execution will be something like this:
 
-`$ circleci local execute --branch development --job build`
+`$ circleci local execute --branch develop --job build`
